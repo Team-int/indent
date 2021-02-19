@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
 import { AppProps } from 'next/app'
+import Layout from '../layouts/layout'
+import 'tailwindcss/tailwind.css'
 
-/**
- * withRedux HOC
- * NextJS wrapper for Redux
- */
-
-const CustomApp: FC<AppProps> = ({ Component, pageProps }) => <Component {...pageProps} />
-
-export default CustomApp
+export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
+}

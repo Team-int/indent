@@ -5,12 +5,14 @@ import React from 'react'
 // component that works on pages which support both client and server side
 // rendering, and avoids any flash incorrect content on initial page load.
 
-type showMenu = {
+type ShowMenu = {
   showMenu: boolean // like this
 }
 
-class Header extends React.Component<unknown, { showMenu: boolean }> {
-  state: showMenu
+class Header extends React.Component<Record<string, unknown>, ShowMenu> {
+  state: ShowMenu = {
+    showMenu: false,
+  }
 
   _showMenu = (bool: boolean): void => {
     this.setState({
