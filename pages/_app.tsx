@@ -1,7 +1,11 @@
-import '../styles/globals.css'
+import React, { FC } from 'react'
+import { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+/**
+ * withRedux HOC
+ * NextJS wrapper for Redux
+ */
 
-export default MyApp
+const CustomApp: FC<AppProps> = ({ Component, pageProps }) => <Component {...pageProps} />
+
+export default CustomApp
