@@ -35,10 +35,6 @@ class Header extends React.Component<Record<string, unknown>, ShowMenu> {
                     <a className="text-gray-800 dark:text-white  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md  ">
                       <Link href="/about">About</Link>
                     </a>
-
-                    <a className="text-gray-800 dark:text-white  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md  ">
-                      <Link href="/privacy">Privacy</Link>
-                    </a>
                   </div>
                 </div>
               </div>
