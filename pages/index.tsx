@@ -24,7 +24,7 @@ const Feed: React.FC = () => {
   return (
     <>
       {data.feed.map((post) => (
-        <div key={post.id} className="border-2 w-80 p-4 rounded-md shadow-sm">
+        <div key={post.id} className="border-2 w-full p-4 rounded-md shadow-sm">
           <p className="text-4xl py-2">{post.title}</p>
           <hr></hr>
           <p className="text-xl py-2 line-clamp-2">{post.content}</p>
@@ -37,7 +37,7 @@ const Feed: React.FC = () => {
 const Home: React.FC = () => {
   return (
     <>
-      <p className="text-4xl font-semibold py-4">Posts</p>
+      <p className="text-4xl p-2 font-semibold">Posts</p>
       <Feed />
     </>
   )
