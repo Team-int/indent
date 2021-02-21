@@ -18,7 +18,7 @@ const Layout = ({ title, children }: LayoutProps): JSX.Element => {
         <header className="fixed w-screen z-50">
           <Header />
         </header>
-        <div className="w-full text-2xl pt-20 container md:px-80  dark:bg-gray-900  dark:text-white">
+        <div className="w-full pt-20 container text-2xl lg:px-80  dark:bg-gray-900  dark:text-white">
           {children}
         </div>
       </div>

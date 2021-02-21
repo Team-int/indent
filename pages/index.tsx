@@ -1,4 +1,6 @@
 import { gql, useQuery } from '@apollo/client'
+import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
 
 const GET_POSTS = gql`
   query {
@@ -24,10 +26,12 @@ const Feed: React.FC = () => {
   return (
     <>
       {data.feed.map((post) => (
-        <div key={post.id} className="border-2 w-full p-4 rounded-md shadow-sm">
-          <p className="text-4xl py-2">{post.title}</p>
-          <hr></hr>
-          <p className="text-xl py-2 line-clamp-2">{post.content}</p>
+        <div key={post.id} className="border-2 w-full p-4 xl:rounded-md">
+          <Link href={'/posts/' + post.id}>
+            <a className="text-5xl font-bold my-4">{post.title}</a>
+          </Link>
+
+          <ReactMarkdown className="prose prose-sm line-clamp-1">{post.content}</ReactMarkdown>
         </div>
       ))}
     </>
