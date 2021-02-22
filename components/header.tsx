@@ -22,10 +22,10 @@ class Header extends React.Component<Record<string, unknown>, ShowMenu> {
 
   render(): JSX.Element {
     return (
-      <div>
-        <nav className="bg-white opacity-90 dark:bg-gray-800 z-10">
-          <div className="lg:px-80 px-4">
-            <div className="flex items-center justify-between h-10">
+      <>
+        <nav className="bg-white opacity-90 dark:bg-gray-800 z-10 shadow-sm">
+          <div className=" lg:px-4 xl:px-80 px-2">
+            <div className="flex items-center justify-between h-14">
               <div className=" flex items-center">
                 <div className="flex md:hidden">
                   <button
@@ -53,7 +53,7 @@ class Header extends React.Component<Record<string, unknown>, ShowMenu> {
                 <div className="px-4 hidden md:block ml-4">
                   <div className="flex items-baseline  ">
                     <input
-                      className="input border  border-gray-400 rounded-md text-sm m-2 focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"
+                      className="input border w-96  border-gray-400 rounded-md text-sm  focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"
                       placeholder="Search.."
                       type="text"
                       autoComplete="off"
@@ -65,6 +65,9 @@ class Header extends React.Component<Record<string, unknown>, ShowMenu> {
                 <div className="ml-4 flex items-center md:ml-6">
                   <div className="ml-3 relative">
                     <div className="relative inline-block text-left">
+                      <button className="rounded-md bg-blue-700 text-white py-2 px-4 m-2">
+                        Sign up
+                      </button>
                       <div className="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
                         <div
                           className="py-1 "
@@ -100,8 +103,7 @@ class Header extends React.Component<Record<string, unknown>, ShowMenu> {
             </div>
           </div>
         )}
-        <hr></hr>
-      </div>
+      </>
     )
   }
 }

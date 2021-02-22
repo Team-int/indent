@@ -4,25 +4,31 @@ import Header from '../components/header'
 
 type LayoutProps = {
   title?: string
+  fixed?: boolean
   children: ReactNode
 }
 
-const Layout = ({ title, children }: LayoutProps): JSX.Element => {
+const Layout = ({ title, fixed, children }: LayoutProps): JSX.Element => {
   return (
-    <div className="  min-h-screen  ">
+    <>
       <Head>
-        <title>{title || 'Indent'}</title>
         <link rel="icon" href="/favicon.ico" />
+        <title>{title} - Indent </title>
       </Head>
-      <div className="  min-h-screen dark:bg-gray-900">
+      <div className="  min-h-screen dark:bg-gray-900 bg-gray-100 ">
         <header className="fixed w-screen z-50">
           <Header />
         </header>
-        <div className="w-full pt-20 container text-2xl lg:px-80  dark:bg-gray-900  dark:text-white">
+        <div
+          className={
+            'pt-14 lg:pt-20  text-2xl md:px-4 lg:px-80 min-w-full dark:bg-gray-900  dark:text-white ' +
+            (fixed ? 'h-screen' : 'min-h-screen')
+          }
+        >
           {children}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

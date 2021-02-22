@@ -5,7 +5,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ['disabled'],
+    }
   },
   plugins: [
     require('@tailwindcss/forms'),
@@ -13,7 +15,5 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
     // ...
   ],
-  corePlugins: {
-    preflight: false,
-  },
+
 }
