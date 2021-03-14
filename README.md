@@ -4,4 +4,4 @@
 
 개발자들을 위한 소통 공간, indent.
 
-made by. io and chul0721 from Team Union with Team int.
+made by. io and chul0721 from Team int.
